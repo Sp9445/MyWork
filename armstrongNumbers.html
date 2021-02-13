@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the given number is armstrong number or not..</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="num" placeholder="Enter the number here..">
+        <input type="button" value="Check Now" onclick="test();">
+    </form>
+    <h4 id="output"></h4>
+</body>
+<script>
+    function test(){
+        let number=document.getElementById("num").value;
+       var temp=number;
+       var result=0;
+       counter=0;
+        while(temp>=1)
+        {
+           temp= temp/10;
+           counter++;
+        }
+       // document.getElementById("output").innerHTML+="The given number has "+counter+" digits<br>";
+       temp=number;
+        while(temp>=1)
+        {
+           var rem=temp%10;
+            temp=temp/10;
+            temp=temp-(rem/10);
+            result+=Math.pow(rem,counter);
+          
+
+        }
+        if(result==number)
+        {
+        document.getElementById("output").innerHTML="<br> The given number is an armstrong number";
+        document.getElementById("output").style.color="green";
+    }
+        else
+        {
+        document.getElementById("output").innerHTML="<br> The given number is not an armstrong number";
+        document.getElementById("output").style.color="red";   
+    }
+    }
+</script>
+</html>
