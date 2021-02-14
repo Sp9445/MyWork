@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Kruti Dev';
+    src: url('Kruti Dev 010 Regular.ttf') format('truetype')}
+
+
+.hindi{
+    font-family: 'kruti dev';
+    color :blue;
+}
+.english
+{
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(40, 43, 43);
+}
